@@ -11,8 +11,10 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@xkeshi/vue-countdown": "^1.0.1",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
+    "vue-countdown": "^1.0.4",
     "vue-i18n": "^7.3.3",
     "vue-i18n-loader": "^1.0.0",
     "vue-particles": "^1.0.9",

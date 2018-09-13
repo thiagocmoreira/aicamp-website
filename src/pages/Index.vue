@@ -14,6 +14,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@font-face
+  font-family BebasNeue
+  src url(../assets/fonts/BebasNeue/BebasNeue_Regular.ttf)
 .index-container
   background #2b2b2b
 </style>
