@@ -17,7 +17,7 @@
       @click="changeLight"
     ).btn-light.animate-pop
     div.content
-      img(:src="lightMode ? '../assets/img/AI-Camp-preto.png' : '../assets/img/AI-Camp-branca.png'").logo.animate-pop
+      img(:src="lightMode ? blackLogo : whiteLogo").logo.animate-pop
       countdown(:time="congress - now").animate-pop
         template(slot-scope="props")
           div.timer
@@ -55,6 +55,14 @@ export default {
     changeLight () {
       this.lightMode = !this.lightMode
     }
+  },
+  computed: {
+    blackLogo () {
+      return require('../assets/img/AI-Camp-preto.png')
+    },
+    whiteLogo () {
+      return require('../assets/img/AI-Camp-branca.png')
+    }
   }
 }
 </script>
@@ -86,6 +94,10 @@ export default {
 .logo
   max-width 350px
   height auto
+  @media (max-width: 490px)
+    max-width 270px
+  @media (max-width: 380px)
+    max-width 230px
 span
   font-size 30px
   color white
@@ -101,10 +113,16 @@ span
   display flex
   flex-direction column
   align-items center
+  @media (max-width: 380px)
+    margin 0 7px
 .date
   font-size 36px
+  @media (max-width: 380px)
+    font-size 32px
 .date-description
   font-size 10px
+  @media (max-width: 380px)
+    font-size 8px
 .btn-light
   position absolute
   top 0
