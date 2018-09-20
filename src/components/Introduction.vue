@@ -1,38 +1,16 @@
 <template lang="pug">
-  q-page(:class="[(lightMode ? 'light-mode' : '')]").introduction-container
+  q-page.introduction-container
+    menu-index.menu-index
+    div.content
+      img(src="../assets/img/frente.png")
     vue-particles(
-      :key="lightMode ? '1' : '2'"
-      :color="lightMode ? '#333' : '#fff'",
-      :particlesNumber="lightMode ? 200 : 160",
+      color="#fff",
+      :particlesNumber="160",
       :lineLinked="false",
       :moveSpeed="1",
       hoverMode="none",
       clickMode="repulse"
     )
-    q-btn(
-      :icon="lightMode ? 'mdi-lightbulb-on' : 'mdi-lightbulb'",
-      :color="lightMode ? 'grey-5' : 'grey-9'",
-      round,
-      size="12px",
-      @click="changeLight"
-    ).btn-light.animate-pop
-    div.content
-      img(:src="lightMode ? blackLogo : whiteLogo").logo.animate-pop
-      countdown(:time="congress - now").animate-pop
-        template(slot-scope="props")
-          div.timer
-            span.time-slot
-              div.date {{ props.days }}
-              div.date-description days
-            span.time-slot
-              div.date {{ props.hours }}
-              div.date-description hours
-            span.time-slot
-              div.date {{ props.minutes }}
-              div.date-description minutes
-            span.time-slot
-              div.date {{ props.seconds }}
-              div.date-description seconds
 </template>
 
 <script>
@@ -42,18 +20,18 @@ import VueCountdown from '@xkeshi/vue-countdown'
 Vue.use(VueParticles)
 Vue.component(VueCountdown.name, VueCountdown)
 
+import MenuIndex from '../components/menu/Menu'
+
 export default {
   name: 'Introduction',
+  components: {
+    MenuIndex
+  },
   data () {
     return {
       now: new Date().getTime(),
       congress: new Date('2018-09-26 18:40:00 GMT-0300').getTime(),
       lightMode: true
-    }
-  },
-  methods: {
-    changeLight () {
-      this.lightMode = !this.lightMode
     }
   },
   computed: {
@@ -75,12 +53,16 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 .introduction-container
-  background linear-gradient(to right, #252525,#353535)
+  background-image url(https://images.unsplash.com/photo-1513112687946-67bc1c823f3a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05f28f8731c3274f7ed610e7f74b97c9&auto=format&fit=crop&w=1489&q=80)
   width 100%
-  &.light-mode
-    background linear-gradient(to right, #cecece, white)
-    span
-      color #252525
+.menu-index
+  position absolute
+  top 0
+  width 100%
+  z-index 99
+  @media (max-width: 901px)
+    position fixed
+    top 0
 .content
   position absolute
   top 0
@@ -91,41 +73,4 @@ export default {
   align-items center
   justify-content center
   pointer-events none
-.logo
-  max-width 350px
-  height auto
-  @media (max-width: 490px)
-    max-width 270px
-  @media (max-width: 380px)
-    max-width 230px
-span
-  font-size 30px
-  color white
-  margin-top 30px
-  display inline-block
-  font-family BebasNeue
-  font-weight bold
-  letter-spacing 1.5px
-.timer
-  display flex
-.time-slot
-  margin 0 10px
-  display flex
-  flex-direction column
-  align-items center
-  @media (max-width: 380px)
-    margin 0 7px
-.date
-  font-size 36px
-  @media (max-width: 380px)
-    font-size 32px
-.date-description
-  font-size 10px
-  @media (max-width: 380px)
-    font-size 8px
-.btn-light
-  position absolute
-  top 0
-  right 0
-  margin 15px
 </style>
