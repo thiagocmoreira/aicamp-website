@@ -3,17 +3,25 @@
     q-scroll-observable(@scroll="userHasScrolled")
     menu-index(v-show="menuVisibility", logoWidth="130px", :appear="true").menu-visible.animate-popup-down
     introduction
-    introduction
+    about-us
+    schedule
+    professionals
 </template>
 
 <script>
-import Introduction from '../components/Introduction'
 import MenuIndex from '../components/menu/Menu'
+import Introduction from '../components/sections/Introduction'
+import AboutUs from '../components/sections/AboutUs'
+import Schedule from '../components/sections/Schedule'
+import Professionals from '../components/sections/Professionals'
 export default {
   name: 'PageIndex',
   components: {
+    MenuIndex,
     Introduction,
-    MenuIndex
+    AboutUs,
+    Schedule,
+    Professionals
   },
   data () {
     return {
@@ -38,10 +46,21 @@ export default {
 }
 </script>
 
+<style lang="stylus">
+.index-container
+  font-family OpenSans, Arial, Helvetica, sans-serif
+</style>
+
 <style lang="stylus" scoped>
 @font-face
   font-family BebasNeue
   src url(../assets/fonts/BebasNeue/BebasNeue_Regular.ttf)
+@font-face
+  font-family Adam
+  src url(../assets/fonts/ADAM_CG_PRO.otf)
+@font-face
+  font-family OpenSans
+  src url(../assets/fonts/OpenSans/OpenSans-Regular.ttf)
 .index-container
   background #2b2b2b
 .menu-visible

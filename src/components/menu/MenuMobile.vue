@@ -4,8 +4,6 @@
       scrollactive(:offset="50").menu-list
         a(href="#about-us").scrollactive-item
           li {{$t('menu.aboutUs')}}
-        a(href="#objective").scrollactive-item
-          li {{$t('menu.objective')}}
         a(href="#content").scrollactive-item
           li {{$t('menu.content')}}
         a(href="#schedule").scrollactive-item

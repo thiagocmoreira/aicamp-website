@@ -2,8 +2,8 @@
   div.navbar-container
     q-card(:class="{appear: appear}").menu-container
       a(@click="$router.push('/')", title="Legal Labs").logo
-        img(src="../../assets/img/AI-Camp-preto.png", :style="{ width: logoWidth }").logo-desk
-        img(src="../../statics/quasar-logo.png").logo-mobile
+        img(src="../../assets/img/logo-preta.png", :style="{ width: logoWidth }").logo-desk
+        img(src="../../assets/img/simbolo-azul.png").logo-mobile
       scrollactive(:offset="50").menu-items
         div(@click="changeLang").change-lang.btn-mobile.mobile-lang
           img(:src="brLang ? bandeiras2 : bandeiras1")
@@ -19,7 +19,6 @@
         ).btn-mobile
         nav
           a(href="#about-us").scrollactive-item {{$t('menu.aboutUs')}}
-          a(href="#objective").scrollactive-item {{$t('menu.objective')}}
           a(href="#content").scrollactive-item {{$t('menu.content')}}
           a(href="#schedule").scrollactive-item {{$t('menu.schedule')}}
           a(href="#professionals").scrollactive-item {{$t('menu.professionals')}}
