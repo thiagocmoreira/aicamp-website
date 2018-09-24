@@ -6,6 +6,7 @@
     about-us
     schedule
     professionals
+    footer-page
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import Introduction from '../components/sections/Introduction'
 import AboutUs from '../components/sections/AboutUs'
 import Schedule from '../components/sections/Schedule'
 import Professionals from '../components/sections/Professionals'
+import FooterPage from '../components/sections/FooterPage'
 export default {
   name: 'PageIndex',
   components: {
@@ -21,7 +23,8 @@ export default {
     Introduction,
     AboutUs,
     Schedule,
-    Professionals
+    Professionals,
+    FooterPage
   },
   data () {
     return {
