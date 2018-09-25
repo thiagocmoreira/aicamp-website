@@ -8,7 +8,7 @@
           p At this point, any relevant industry member or already owns its machine learning models in operation or are one step closer to it.
           p AI CAMP is a training program in natural language processing and deep learning, on real legal or governmental data, with duration of ve months and the objective of training high skilled AI engineers.
         div.image
-          img(src="../../assets/img/about.jpg").img
+          img(src="../../assets/img/ai6.png").img
       div.content#content
         div.animation
           img(src="../../assets/img/ai3.png").circuit
@@ -59,18 +59,18 @@ export default {
     line-height 48px
     color $tertiary
   .separator
-    width calc(100% + 25px)
+    // width calc(100% + 25px)
     background $primary
     height 4px
     margin 2px 0 25px 0
+    width 100%
     &.other
       background #1dffd4
-      width 100%
       height 5px
   p
     color $tertiary
   .img
-    max-width 380px
+    max-width 250px
     margin-left 25px
   .content
     margin 20px auto 0 auto

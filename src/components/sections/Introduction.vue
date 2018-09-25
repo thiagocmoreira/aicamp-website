@@ -18,6 +18,15 @@
     div.content
       img(src="../../assets/img/frente.png").logo-big
       img(src="../../assets/img/vertical-branco.png").logo-vert
+    nav.menu
+      div.inner-menu
+        a
+          img(src="../../assets/img/AI-Camp-branca.png")
+        nav
+          a(href="#about-us").scrollactive-item {{$t('menu.aboutUs')}}
+          a(href="#content").scrollactive-item {{$t('menu.content')}}
+          a(href="#schedule").scrollactive-item {{$t('menu.schedule')}}
+          a(href="#professionals").scrollactive-item {{$t('menu.professionals')}}
     p.we-are-there #wearethere
 </template>
 
@@ -145,4 +154,32 @@ export default {
   @media (max-width: 414px)
     font-size 20px
     margin 20px
+.menu
+  position absolute
+  top 0
+  width 100%
+  display flex
+  padding 25px
+  .inner-menu
+    display flex
+    justify-content space-between
+    max-width 1233px
+    width 100%
+    margin 0 auto
+    align-items center
+  a
+    max-width 120px
+    img
+      width 100%
+  nav
+    display flex
+    a
+      color white
+      margin-left 15px
+      text-decoration none
+      text-transform uppercase
+      &:visited
+        color white
+      &:hover
+        color $primary
 </style>
