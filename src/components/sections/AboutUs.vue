@@ -10,15 +10,21 @@
         div.image
           img(src="../../assets/img/about.jpg").img
       div.content#content
-        h2.title Content
-        ul.list
-          li Structured literature review of the area.
-          li Machine learning project strategy.
-          li Collection, cleaning, labeling and expansion of the dataset.
-          li Model training for an actual application.
-          li Preparation for an eficient and organized process of experimentation.
-          li Performing error analysis for model improvements.
-          li Deployment of an AI product.
+        div.animation
+          img(src="../../assets/img/ai3.png").circuit
+          img(src="../../assets/img/ai2.png").move
+          img(src="../../assets/img/ai1.png").machine
+        div.content-list
+          h2.title Content
+          div.separator.other
+          ul.list
+            li Structured literature review of the area.
+            li Machine learning project strategy.
+            li Collection, cleaning, labeling and expansion of the dataset.
+            li Model training for an actual application.
+            li Preparation for an eficient and organized process of experimentation.
+            li Performing error analysis for model improvements.
+            li Deployment of an AI product.
 </template>
 
 <script>
@@ -32,7 +38,7 @@ export default {
 .about-us-container
   display flex
   flex-direction column
-  padding 60px 0
+  padding 60px 0 40px 0
   background white
   width 100%
   font-family OpenSans
@@ -57,21 +63,47 @@ export default {
     background $primary
     height 4px
     margin 2px 0 25px 0
+    &.other
+      background #1dffd4
+      width 100%
+      height 5px
   p
     color $tertiary
   .img
-    max-width 550px
+    max-width 380px
     margin-left 25px
   .content
-    background $grey-5
-    margin 50px auto 0 auto
-    padding 40px
-    width 80%
-    .title
-      text-align center
-      margin-bottom 10px
+    margin 20px auto 0 auto
+    width 100%
+    display flex
+    .animation
+      position relative
+      width 300px
+      height 330px
+      margin-top -30px
+      margin-right 50px
+      .machine
+        max-width 250px
+        position absolute
+        top 0
+        right 0
+      .move
+        max-width 40px
+        position absolute
+        top 0
+        right 0
+        margin-right 204px
+        margin-top 110px
+      .circuit
+        max-width 150px
+        position absolute
+        bottom 0
+        left 0
+  .content-list
+    flex 1
   .list
     margin 0
+    padding-left 20px
     li
       padding-left 10px
       list-style-type square

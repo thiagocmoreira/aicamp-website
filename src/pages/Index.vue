@@ -65,7 +65,7 @@ export default {
   font-family OpenSans
   src url(../assets/fonts/OpenSans/OpenSans-Regular.ttf)
 .index-container
-  background #2b2b2b
+  background white
 .menu-visible
   position fixed
   top 0

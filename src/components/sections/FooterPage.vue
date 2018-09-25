@@ -3,19 +3,15 @@
     div.inner-content
       div.image
         img(src="../../assets/img/vertical-branco.png")
-      div.social-media
-        h4 Redes Sociais
-        p Fique por dentro das novidades sobre o AI Camp em nossas redes sociais
-        div.medias
-          q-btn(icon="mdi-linkedin", round, color="white", flat, size="24px")
-          q-btn(icon="mdi-instagram", round, color="white", flat, size="24px")
-          q-btn(icon="mdi-facebook", round, color="white", flat, size="24px")
+      div.coming-soon
+        q-icon(name="mdi-timer", color="teal-4", size="70px")
+        p More informations soon...
       div.form
+        h4.contact Contact
         form(action="https://formspree.io/contato@legalabs.com.br", method="POST", target="_blank").fields
-          q-input(color="white", placeholder="Nome", :value="name", name="Nome", required, inverted-light)
-          q-input(color="white", placeholder="Empresa", name="Empresa", :value="company", required, inverted-light)
-          q-input(color="white", placeholder="Email", name="Email", :value="email", required, inverted-light)
-          q-input(color="white", placeholder="Mensagem", type="textarea", name="Mensagem", :value="message", :max-height="200", required, inverted-light)
+          q-input(color="grey-8", placeholder="Nome", :value="name", name="Nome", required, inverted)
+          q-input(color="grey-8", placeholder="Email", name="Email", :value="email", required, inverted)
+          q-input(color="grey-8", placeholder="Mensagem", type="textarea", name="Mensagem", :value="message", :max-height="200", required, inverted)
           q-btn(color="primary").send-btn Send
     div.copyrigth
       div.inner-copy
@@ -52,22 +48,31 @@ export default {
   display flex
   flex-direction row
 .image
-  width 250px
+  width 160px
   img
     max-width 150px
-.social-media
+.coming-soon
   width 33%
-  h4
-    font-family Adam
-    margin 0
-    font-size 18px
-    line-height 24px
-    color white
-    margin-bottom 10px
-    text-align left
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
   p
     color white
-    font-size 12px
+    font-size 20px
+    font-family Adam
+    text-align center
+    width 220px
+  .q-icon
+    margin-bottom 20px
+h4
+  font-family Adam
+  margin 0
+  font-size 18px
+  line-height 24px
+  color white
+  margin-bottom 10px
+  text-align left
 .form
   flex 1
   padding-left 10px

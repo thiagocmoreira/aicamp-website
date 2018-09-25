@@ -30,6 +30,8 @@
         q-card.border.right
           div.photo
             img(src="../../assets/img/Kleber.jpg")
+      img(src="../../assets/img/Circulos.svg").circle-1
+      img(src="../../assets/img/Circulos.svg").circle-2
 </template>
 
 <script>
@@ -44,9 +46,10 @@ export default {
   display flex
   flex-direction column
   padding 90px 0 60px 0
-  background white
+  background linear-gradient(to bottom, #ffffff, $grey-4)
   width 100%
   font-family OpenSans
+  position relative
 .inner-content
   width 90%
   max-width 1233px
@@ -61,9 +64,11 @@ export default {
   color $tertiary
   text-align center
   margin-bottom 30px
+  z-index 10
 .professional
   display flex
   align-items center
+  z-index 10
 .border
   overflow hidden
   border-radius 500px
@@ -101,4 +106,19 @@ export default {
     text-align left
     &.right
       text-align right
+.circle-1
+  position absolute
+  left 0
+  top 0
+  max-width 800px
+  margin-left -250px
+  opacity 0.5
+.circle-2
+  position absolute
+  right 0
+  bottom 0
+  max-width 800px
+  margin-right -250px
+  opacity 0.8
+  filter brightness(0) invert(1)
 </style>

@@ -11,7 +11,7 @@
         p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
       q-card.card
         h3.card-title MVP Challenger
-        img(src="../../assets/img/quebra-cabecas.svg")
+        img(src="../../assets/img/Quebra-cabecas.svg")
         p The MVP Challenge is the last phase of the training program organized in the form of a competition. Its start coincides with the disclosure of problems that have to be solved. At the end of 4 weeks the models developed by the competitors by the are assessed against the part of the dataset designated for the validation.
       q-card.card
         h3.card-title Awards
@@ -57,6 +57,7 @@ export default {
   margin 0 auto
   margin-top -300px
   width 90%
+  justify-content center
 .card
   flex 1
   background linear-gradient(to bottom, $primary, #1dffd4)
@@ -68,6 +69,7 @@ export default {
   max-width 360px
   img
     max-height 130px
+    margin 15px 0
   p
     text-align justify
 .card-title
