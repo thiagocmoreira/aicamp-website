@@ -1,14 +1,14 @@
 <template lang="pug">
   q-slide-transition
     div.menu-mobile-container
-      scrollactive(:offset="50").menu-list
-        a(href="#about-us").scrollactive-item
+      div.menu-list
+        a(href="#", v-scroll-to="{ el: '#about-us', offset: -50}").scrollactive-item
           li {{$t('menu.aboutUs')}}
-        a(href="#content").scrollactive-item
+        a(href="#", v-scroll-to="{ el: '#content', offset: -110}").scrollactive-item
           li {{$t('menu.content')}}
-        a(href="#schedule").scrollactive-item
+        a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}").scrollactive-item
           li {{$t('menu.schedule')}}
-        a(href="#professionals")
+        a(href="#", v-scroll-to="'#professionals'")
           li {{$t('menu.professionals')}}
 </template>
 

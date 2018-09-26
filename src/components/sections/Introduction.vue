@@ -1,7 +1,8 @@
 <template lang="pug">
   q-page(ref="introduction").introduction-container
     q-scroll-observable(@scroll="userHasScrolled")
-    q-parallax(:src="binary", :height="height")
+    //- q-parallax(:src="binary", :height="height")
+    img(:src="binary").binary
     div.women
       div.color
       img(src="../../assets/img/women.png")
@@ -90,6 +91,7 @@ export default {
   position relative
   display flex
   overflow hidden
+  height 100vh
 .menu-index
   position absolute
   top 0
@@ -134,12 +136,14 @@ export default {
   pointer-events none
 .logo-big
   max-width 650px
+  user-select none
   @media (max-width: 768px)
     max-width 500px
   @media (max-width: 740px)
     display none
 .logo-vert
   display none
+  user-select none
   max-width 170px
   @media (max-width: 740px)
     display block
@@ -174,6 +178,7 @@ export default {
   a
     max-width 140px
     img
+      user-select none
       width 100%
   nav
     display flex
@@ -186,4 +191,7 @@ export default {
         color white
       &:hover
         color $primary
+.img-eye
+  height 100vh
+  width auto
 </style>

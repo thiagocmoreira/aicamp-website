@@ -12,7 +12,7 @@
           q-input(color="grey-8", :placeholder="$t('footer.field1')", :value="name", name="Name", required, inverted)
           q-input(color="grey-8", :placeholder="$t('footer.field2')", name="Email", :value="email", required, inverted)
           q-input(color="grey-8", :placeholder="$t('footer.field3')", type="textarea", name="Message", :value="message", :max-height="100", required, inverted)
-          q-btn(color="primary").send-btn {{$t('footer.send')}}
+          q-btn(color="primary", type="submit").send-btn {{$t('footer.send')}}
     div.copyrigth
       div.inner-copy
         p {{$t('copyright')}}

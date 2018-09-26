@@ -25,10 +25,10 @@ export default {
     title: 'Cronograma',
     curringEdge: {
       title: 'Cutting Edge',
-      text: 'A AI Camp tem como objetivo ensinar e desenvolver profissionais atualizados com os mais recentes lançamentos e inovações na indústria e na academia. Para este módulo, selecionamos as principais pesquisas em campos como Visão Computacional, PNL, Aprendizado por Reforço e Robustez e Justiça na Aprendizagem de Máquina. Esperamos que os alunos alcancem o MVP Challenger com conhecimento igual aos pesquisadores em grandes laboratórios ao redor do mundo.'
+      text: 'A AI Camp tem como objetivo ensinar e desenvolver profissionais atualizados com os mais recentes lançamentos e inovações na indústria e na academia. Para este módulo, selecionamos as principais pesquisas em campos como Visão Computacional, PNL, Aprendizado por Reforço e Robustez e Justiça na Aprendizagem de Máquina. Esperamos que os alunos alcancem o MVP Challenge com conhecimento igual aos pesquisadores em grandes laboratórios ao redor do mundo.'
     },
     mvpChallenger: {
-      title: 'MVP Challenger',
+      title: 'MVP Challenge',
       text: 'O MVP Challenger é a última fase do programa de treinamento organizado na forma de uma competição. Seu início coincide com a divulgação de problemas que precisam ser resolvidos. Ao final de 4 semanas, os modelos desenvolvidos pelos concorrentes são avaliados em relação à parte do conjunto de dados designada para a validação.'
     },
     awards: {

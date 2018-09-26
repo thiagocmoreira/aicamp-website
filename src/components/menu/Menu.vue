@@ -4,7 +4,7 @@
       a(@click="$router.push('/')", title="Legal Labs").logo
         img(src="../../assets/img/logo-preta.png", :style="{ width: logoWidth }").logo-desk
         img(src="../../assets/img/simbolo-azul.png").logo-mobile
-      scrollactive(:offset="50").menu-items
+      div.menu-items
         div(@click="changeLang").change-lang.btn-mobile.mobile-lang
           img(:src="brLang ? bandeiras2 : bandeiras1")
         q-btn(
@@ -18,10 +18,10 @@
           color="grey-7"
         ).btn-mobile
         nav
-          a(href="#about-us").scrollactive-item {{$t('menu.aboutUs')}}
-          a(href="#content").scrollactive-item {{$t('menu.content')}}
-          a(href="#schedule").scrollactive-item {{$t('menu.schedule')}}
-          a(href="#professionals").scrollactive-item {{$t('menu.professionals')}}
+          a(href="#", v-scroll-to="{ el: '#about-us', offset: -50}") {{$t('menu.aboutUs')}}
+          a(href="#", v-scroll-to="{ el: '#content', offset: -110}") {{$t('menu.content')}}
+          a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") {{$t('menu.schedule')}}
+          a(href="#", v-scroll-to="'#professionals'") {{$t('menu.professionals')}}
           div(@click="changeLang").change-lang
             img(:src="brLang ? bandeiras2 : bandeiras1")
     menu-mobile(v-show="menuMobileVisibility && !isDesktop")

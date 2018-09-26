@@ -27,8 +27,8 @@ export default {
       text: 'AI Camp has the goal to teach and develop professionals that are up-to-date with the newest releases and breakthroughts in industry and academia. For this module, we select the major researches in fields such as Computer Vision, NLP, Reinforcement Learning and Robustness and Fairness in Machine Learning. We expect that the students reach the MVP Challenger with knowledge equal to researchers in big laboratories around the world.'
     },
     mvpChallenger: {
-      title: 'MVP Challenger',
-      text: 'The MVP Challenge is the last phase of the training program organized in the form of a competition. Its start coincides with the disclosure of problems that have to be solved. At the end of 4 weeks the models developed by the competitors by the are assessed against the part of the dataset designated for the validation.'
+      title: 'MVP Challenge',
+      text: 'The MVP Challenge is the last phase of the training program organized in the form of a competition. Its start coincides with the disclosure of problems that have to be solved. At the end of 4 weeks the models developed by the competitors are assessed against the part of the dataset designated for the validation.'
     },
     awards: {
       title: 'Awards',
