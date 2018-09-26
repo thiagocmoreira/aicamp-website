@@ -1,27 +1,27 @@
 <template lang="pug">
   section.schedule-container#schedule
-    h2.title Schedule
+    h2.title {{$t('schedule.title')}}
     div.black
       div.inner-content
         img(src="../../assets/img/Schedule.svg")
     div.cards
       q-card.card
-        h3.card-title Cutting Edge
+        h3.card-title {{$t('schedule.curringEdge.title')}}
         img(src="../../assets/img/Diamante.svg")
-        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        p {{$t('schedule.curringEdge.text')}}
       q-card.card
-        h3.card-title MVP Challenger
-        img(src="../../assets/img/Quebra-cabecas.svg")
-        p The MVP Challenge is the last phase of the training program organized in the form of a competition. Its start coincides with the disclosure of problems that have to be solved. At the end of 4 weeks the models developed by the competitors by the are assessed against the part of the dataset designated for the validation.
+        h3.card-title {{$t('schedule.mvpChallenger.title')}}
+        img(src="../../assets/img/Quebra-cabecas.svg").qc
+        p {{$t('schedule.mvpChallenger.text')}}
       q-card.card
-        h3.card-title Awards
+        h3.card-title {{$t('schedule.awards.title')}}
         img(src="../../assets/img/Medalha.svg")
-        p As an award, the engineer owner of the best model will receive the prize of R $ 1500.00 per problem, and the engineer who achieves the best performance, considering All problems, will receive, in addition to the individual awards, the funding of the course of Advanced Machine Learning For Big Data and Text Processing offered by MIT, with all expenses paid.
+        p {{$t('schedule.awards.text')}}
 </template>
 
 <script>
 export default {
-
+  name: 'Schedule'
 }
 </script>
 
@@ -52,21 +52,55 @@ export default {
   color $tertiary
   text-align center
   margin 0
+  &.title-br
+    font-size 70px
+    line-height 40px
+  @media (max-width: 650px)
+    font-size 75px
+    line-height 35px
+  @media (max-width: 510px)
+    font-size 55px
+    line-height 23px
 .cards
   display flex
   margin 0 auto
   margin-top -300px
   width 90%
   justify-content center
+  @media (max-width: 1118px)
+    flex-wrap wrap
+    // max-width 800px
 .card
   flex 1
-  background linear-gradient(to bottom, $primary, #1dffd4)
+  background linear-gradient(to bottom, $primary, #99ffec)
   margin 0 20px
   padding 35px
   display flex
   flex-direction column
   align-items center
   max-width 360px
+  @media (max-width: 1200px)
+    padding 25px
+    margin 0 15px
+    &:first-of-type
+      margin-left 0
+    &:last-of-type
+      margin-right 0
+  @media (max-width: 1118px)
+    min-width 282px
+    &:nth-of-type(2)
+      margin-right 0
+  @media (max-width: 1004px)
+    &:last-of-type
+      margin-top 30px
+  @media (max-width: 740px)
+    margin 0 0 30px 0 !important
+    width 100%
+    min-width 382px
+    &:last-of-type
+      margin-bottom 4px !important
+  @media (max-width: 500px)
+    min-width 280px
   img
     max-height 130px
     margin 15px 0
@@ -79,4 +113,7 @@ export default {
   line-height 40px
   color $tertiary
   text-align center
+.qc
+  transform scale(0.8)
+  margin 10px 0 !important
 </style>

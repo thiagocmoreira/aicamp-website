@@ -21,7 +21,7 @@
     nav.menu
       div.inner-menu
         a
-          img(src="../../assets/img/AI-Camp-branca.png")
+          img(src="../../assets/img/toda-branca.png")
         nav
           a(href="#about-us").scrollactive-item {{$t('menu.aboutUs')}}
           a(href="#content").scrollactive-item {{$t('menu.content')}}
@@ -136,12 +136,12 @@ export default {
   max-width 650px
   @media (max-width: 768px)
     max-width 500px
-  @media (max-width: 414px)
+  @media (max-width: 740px)
     display none
 .logo-vert
   display none
   max-width 170px
-  @media (max-width: 414px)
+  @media (max-width: 740px)
     display block
 .we-are-there
   font-family Adam
@@ -151,15 +151,19 @@ export default {
   color white
   font-size 32px
   margin 30px
+  @media (max-width: 740px)
+    font-size 26px
+    margin 20px
   @media (max-width: 414px)
     font-size 20px
-    margin 20px
 .menu
   position absolute
   top 0
   width 100%
   display flex
   padding 25px
+  @media (max-width: 740px)
+    display none
   .inner-menu
     display flex
     justify-content space-between
@@ -168,7 +172,7 @@ export default {
     margin 0 auto
     align-items center
   a
-    max-width 120px
+    max-width 140px
     img
       width 100%
   nav

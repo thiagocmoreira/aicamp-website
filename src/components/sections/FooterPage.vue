@@ -5,17 +5,17 @@
         img(src="../../assets/img/vertical-branco.png")
       div.coming-soon
         q-icon(name="mdi-timer", color="teal-4", size="70px")
-        p More informations soon...
+        p {{$t('footer.informationsSoon')}}
       div.form
-        h4.contact Contact
+        h4.contact {{$t('footer.contact')}}
         form(action="https://formspree.io/contato@legalabs.com.br", method="POST", target="_blank").fields
-          q-input(color="grey-8", placeholder="Nome", :value="name", name="Nome", required, inverted)
-          q-input(color="grey-8", placeholder="Email", name="Email", :value="email", required, inverted)
-          q-input(color="grey-8", placeholder="Mensagem", type="textarea", name="Mensagem", :value="message", :max-height="200", required, inverted)
-          q-btn(color="primary").send-btn Send
+          q-input(color="grey-8", :placeholder="$t('footer.field1')", :value="name", name="Name", required, inverted)
+          q-input(color="grey-8", :placeholder="$t('footer.field2')", name="Email", :value="email", required, inverted)
+          q-input(color="grey-8", :placeholder="$t('footer.field3')", type="textarea", name="Message", :value="message", :max-height="100", required, inverted)
+          q-btn(color="primary").send-btn {{$t('footer.send')}}
     div.copyrigth
       div.inner-copy
-        p AI CAMP 2018 © TODOS OS DIREITOS RESERVADOS
+        p {{$t('copyright')}}
 </template>
 
 <script>
@@ -47,16 +47,33 @@ export default {
   margin 0 auto
   display flex
   flex-direction row
+  @media (max-width: 860px)
+    flex-wrap wrap
+    justify-content center
+  @media (max-width: 580px)
+    flex-direction column
+    align-items center
 .image
   width 160px
   img
     max-width 150px
+    @media (max-width: 782px)
+      margin-bottom 60px
+      margin-left 20px
+    @media (max-width: 580px)
+      margin 0
 .coming-soon
   width 33%
   display flex
   flex-direction column
   justify-content center
   align-items center
+  @media (max-width: 850px)
+    margin 0 20px
+  @media (max-width: 782px)
+    margin-left 80px
+  @media (max-width: 580px)
+    margin 30px 0
   p
     color white
     font-size 20px
@@ -78,8 +95,9 @@ h4
   padding-left 10px
   display flex
   flex-direction column
-  @media (max-width: 414px)
+  @media (max-width: 580px)
     padding-left 0
+    width 100%
   .q-input
     margin-bottom 12px
     border-radius 5px
@@ -101,12 +119,16 @@ h4
   background #1c1c1c
   padding 10px 20px
   margin 0
+  @media (max-width: 580px)
+    text-align center
 .inner-copy
   max-width 1233px
+  margin 0 auto
   p
     margin 0
     color $grey-7
     font-size 11px
+    text-transform uppercase
 .send-btn
   margin 0 0 0 auto
   display block

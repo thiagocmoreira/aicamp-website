@@ -28,10 +28,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueScrollactive from 'vue-scrollactive'
-Vue.use(VueScrollactive)
-
 import MenuMobile from './MenuMobile'
 
 export default {

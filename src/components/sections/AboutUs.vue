@@ -1,35 +1,61 @@
 <template lang="pug">
   section.about-us-container#about-us
+    q-scroll-observable(@scroll="userHasScrolled")
     div.inner-content
       div.description-content
         div.description
-          h2.title About Us
+          h2.title {{$t('aboutUs.title')}}
           div.separator
-          p At this point, any relevant industry member or already owns its machine learning models in operation or are one step closer to it.
-          p AI CAMP is a training program in natural language processing and deep learning, on real legal or governmental data, with duration of ve months and the objective of training high skilled AI engineers.
+          p {{$t('aboutUs.text1')}}
+          p {{$t('aboutUs.text2')}}
         div.image
-          img(src="../../assets/img/ai6.png").img
+          img(:class="[animateBrain ? ['show-brain', 'animate-pop'] : '']", src="../../assets/img/ai6.png").img
       div.content#content
         div.animation
           img(src="../../assets/img/ai3.png").circuit
-          img(src="../../assets/img/ai2.png").move
+          img(src="../../assets/img/ai2.png", :class="animateMode? 'move-down' : ''").move
           img(src="../../assets/img/ai1.png").machine
         div.content-list
-          h2.title Content
+          h2.title {{$t('content.title')}}
           div.separator.other
           ul.list
-            li Structured literature review of the area.
-            li Machine learning project strategy.
-            li Collection, cleaning, labeling and expansion of the dataset.
-            li Model training for an actual application.
-            li Preparation for an eficient and organized process of experimentation.
-            li Performing error analysis for model improvements.
-            li Deployment of an AI product.
+            li {{$t('content.list1')}}
+            li {{$t('content.list2')}}
+            li {{$t('content.list3')}}
+            li {{$t('content.list4')}}
+            li {{$t('content.list5')}}
+            li {{$t('content.list6')}}
+            li {{$t('content.list7')}}
 </template>
 
 <script>
 export default {
-  name: 'AboutUs'
+  name: 'AboutUs',
+  data () {
+    return {
+      animateBrain: false,
+      animateMode: false,
+      wasActivated: false
+    }
+  },
+  mounted () {
+    setInterval(() => { this.changeAnimate() }, 2000)
+    this.isMobile = this.$q.platform.is.mobile
+  },
+  methods: {
+    changeAnimate () {
+      this.animateMode = !this.animateMode
+    },
+    userHasScrolled (scroll) {
+      if (!this.isMobile && !this.wasActivated && scroll.position >= 230) {
+        this.wasActivated = true
+        this.animateBrain = true
+      } else if (this.isMobile && !this.wasActivated && scroll.position >= 950) {
+        this.wasActivated = true
+        this.animateBrain = true
+      }
+    }
+  }
 }
 </script>
 
@@ -50,6 +76,8 @@ export default {
     flex-direction column
   .description-content
     display flex
+    @media (max-width: 840px)
+      flex-direction column
   .description
     position relative
   .title
@@ -72,16 +100,24 @@ export default {
   .img
     max-width 250px
     margin-left 25px
+    visibility hidden
+    @media (max-width: 840px)
+      margin 20px auto 40px auto
+      display block
   .content
     margin 20px auto 0 auto
     width 100%
     display flex
+    @media (max-width: 840px)
+      flex-direction column-reverse
     .animation
       position relative
       width 300px
       height 330px
       margin-top -30px
       margin-right 50px
+      @media (max-width: 840px)
+        margin 30px auto 20px auto
       .machine
         max-width 250px
         position absolute
@@ -94,6 +130,8 @@ export default {
         right 0
         margin-right 204px
         margin-top 110px
+        width 100%
+        transition all 0.6s ease
       .circuit
         max-width 150px
         position absolute
@@ -107,4 +145,8 @@ export default {
     li
       padding-left 10px
       list-style-type square
+.move-down
+  margin-top 170px !important
+.show-brain
+  visibility visible !important
 </style>
