@@ -9,7 +9,7 @@ export default {
   aboutUs: {
     title: 'Sobre Nós',
     text1: 'Atualmente, qualquer membro relevante da indústria já possui um modelo de aprendizado de máquina em produção ou está em processo de implementação.',
-    text2: 'O AI CAMP é um programa de treinamento em aprendizado de máquina, focado em deep learning e processamento de linguagem natural, usando técnicas de ponta em dados legais e governamentais. O AI CAMP tem uma duração de cinco meses e tem o objetivo de treinar engenheiros de IA altamente qualificados.'
+    text2: 'O AI CAMP é um programa de treinamento profundo em aprendizado de máquina, focado em Deep Learning e processamento de linguagem natural (NLP), usando técnicas de ponta em dados legais e governamentais. O programa de treinamento Standard do AI CAMP tem uma duração de cinco meses e tem o objetivo de treinar engenheiros de IA altamente qualificados.'
   },
   content: {
     title: 'Conteúdo',
@@ -25,11 +25,11 @@ export default {
     title: 'Cronograma',
     curringEdge: {
       title: 'Cutting Edge',
-      text: 'A AI Camp tem como objetivo ensinar e desenvolver profissionais atualizados com os mais recentes lançamentos e inovações na indústria e na academia. Para este módulo, selecionamos as principais pesquisas em campos como Visão Computacional, PNL, Aprendizado por Reforço e Robustez e Justiça na Aprendizagem de Máquina. Esperamos que os alunos alcancem o MVP Challenge com conhecimento igual aos pesquisadores em grandes laboratórios ao redor do mundo.'
+      text: 'A AI CAMP tem como objetivo ensinar e desenvolver profissionais atualizados com os mais recentes lançamentos e inovações na indústria e na academia. Para este módulo, selecionamos as principais pesquisas em campos como Visão Computacional, PNL, Aprendizado por Reforço e Robustez e Justiça na Aprendizagem de Máquina. Esperamos que os alunos alcancem o MVP Challenge com conhecimento igual aos pesquisadores em grandes laboratórios ao redor do mundo.'
     },
     mvpChallenger: {
       title: 'MVP Challenge',
-      text: 'O MVP Challenger é a última fase do programa de treinamento organizado na forma de uma competição. Seu início coincide com a divulgação de problemas que precisam ser resolvidos. Ao final de 4 semanas, os modelos desenvolvidos pelos concorrentes são avaliados em relação à parte do conjunto de dados designada para a validação.'
+      text: 'O MVP Challenge é a última fase do programa de treinamento organizado na forma de uma competição. Seu início coincide com a divulgação de problemas que precisam ser resolvidos. Ao final de 4 semanas, os modelos desenvolvidos pelos concorrentes são avaliados em relação à parte do conjunto de dados designada para a validação.'
     },
     awards: {
       title: 'Awards',
@@ -40,7 +40,7 @@ export default {
     title: 'Professionais Envolvidos',
     ricardo: {
       name: 'RICARDO VIEIRA DE CARVALHO FERNANDES',
-      description: 'Pós-PH.D. em Informática Jurídica no CODEX: O Centro Stanford de Informática Legal, Universidade de Stanford. Fundador do Instituto Brasileiro de Inteligência Artificial. Professora Doutora da Faculdade de Direito da Universidade de Brasília (UnB). Diretor Executivo da Legal.AI - Grupo de Pesquisa em Inteligência Artificial da UnB. Fundador da Legal Labs. Pesquisador Sênior de Inteligência Artificial em Laboratórios Legais. Fundador da AI Camp.'
+      description: 'Pós-PH.D. em Informática Jurídica no CODEX: O Centro Stanford de Informática Legal, Universidade de Stanford. Fundador do Instituto Brasileiro de Inteligência Artificial. Professor Doutor da Faculdade de Direito da Universidade de Brasília (UnB). Diretor Executivo da Legal.AI - Grupo de Pesquisa em Inteligência Artificial da UnB. Fundador da Legal Labs. Pesquisador Sênior de Inteligência Artificial em Laboratórios Legais. Fundador da AI CAMP.'
     },
     fabricio: {
       name: 'Fabrício Braz',
@@ -53,6 +53,10 @@ export default {
     kleber: {
       name: 'Kleber Rodrigues',
       description: 'CIO do Ministério dos Transportes, Portos e Aviação Civil; Ex-diretor da ORACLE; Ex-Diretor de Negócios do SERPRO; Ex-gerente de administração de negócios da ACCENTURE; Ex-Diretor de Negócios da BearingPoint; Ex-Especialista Sênior no Departamento de Finanças do BID; Ex-Coordenador Geral de Tecnologia da Informação do Ministério da Economia.'
+    },
+    yan: {
+      name: 'Yan Teixeira',
+      description: 'Gerente da Startup Legal Labs Brasil. Seu trabalho se une ao de professores, pesquisadores e desenvolvedores que estão explorando a fronteira entre o direito e a tecnologia. Oficial administrativo do II Congresso Internacional de Direito, Governo e Tecnologia, o maior da América Latina no debate e exposição de tecnologias inteligentes.'
     }
   },
   footer: {
@@ -60,8 +64,8 @@ export default {
     contact: 'Contato',
     field1: 'Nome',
     field2: 'E-mail',
-    field3: 'Mesnsagem',
-    send: 'Send'
+    field3: 'Mensagem',
+    send: 'Enviar'
   },
-  copyright: 'AI Camp 2018 © Todos os Direitos Reservados'
+  copyright: 'AI CAMP 2018 © Todos os Direitos Reservados'
 }

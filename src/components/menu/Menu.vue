@@ -3,7 +3,8 @@
     q-card(:class="{appear: appear}").menu-container
       a(@click="$router.push('/')", title="Legal Labs").logo
         img(src="../../assets/img/logo-preta.png", :style="{ width: logoWidth }").logo-desk
-        img(src="../../assets/img/simbolo-azul.png").logo-mobile
+        img(src="../../assets/img/logo-preta.png").logo-mobile
+        img(src="../../assets/img/simbolo-azul.png").logo-mobile-small
       div.menu-items
         div(@click="changeLang").change-lang.btn-mobile.mobile-lang
           img(:src="brLang ? bandeiras2 : bandeiras1")
@@ -92,7 +93,7 @@ export default {
   &.appear
     padding 15px 20px
   @media (max-width: 900px)
-    padding 12px 7px 12px 17px
+    padding 12px 7px 9px 17px !important
     width 100%
     margin 0 auto
   @media (max-width: 360px)
@@ -112,13 +113,16 @@ export default {
           display none
       &.logo-mobile
         display none
-        max-width 50px
+        max-width 135px
         @media (max-width: 999px)
           display block
-        @media (max-width: 800px)
-          max-width 40px
-        @media (max-width: 360px)
-          max-width 32px
+        @media (max-width: 401px)
+          display none
+      &.logo-mobile-small
+        max-width 43px
+        display none
+        @media (max-width: 400px)
+          display block
   .logo-partner
     position absolute
     top 0

@@ -13,11 +13,11 @@
         div.description
           h3.title.right {{$t('professionals.fabricio.name')}}
           p {{$t('professionals.fabricio.description')}}
-        q-card.border.right
+        q-card.border.right.border-2
           div.photo
             img(src="../../assets/img/FABRICIO.jpg")
       div.professional
-        q-card.border
+        q-card.border.border-3
           div.photo
             img(src="../../assets/img/NILTON_CORREIA.jpg")
         div.description
@@ -27,11 +27,22 @@
         div.description
           h3.title.right {{$t('professionals.kleber.name')}}
           p {{$t('professionals.kleber.description')}}
-        q-card.border.right
+        q-card.border.right.border-4
           div.photo
             img(src="../../assets/img/Kleber.jpg")
+      div.professional
+        q-card.border.border-5
+          div.photo
+            img(src="../../assets/img/yan.jpeg").yan
+        div.description
+          h3.title {{$t('professionals.yan.name')}}
+          p {{$t('professionals.yan.description')}}
       img(src="../../assets/img/Circulos.svg").circle-1
       img(src="../../assets/img/Circulos.svg").circle-2
+    //- div.parallax
+    //-   q-parallax(src="https://images.unsplash.com/photo-1528055823578-1c18ae59ef8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78572c8b99cfe7600789248141fc96c3&auto=format&fit=crop&w=1206&q=80", :height="200").parallax
+    //-   div.filter-p
+    //-     p Deep Training in Deep Learning skills
 </template>
 
 <script>
@@ -45,7 +56,7 @@ export default {
 .professionals-container
   display flex
   flex-direction column
-  padding 90px 0 60px 0
+  padding 90px 0 0 0
   background linear-gradient(to bottom, #ffffff, $grey-4)
   width 100%
   font-family OpenSans
@@ -68,6 +79,8 @@ export default {
   z-index 10
   @media (max-width: 680px)
     padding-bottom 10px
+  @media (max-width: 360px)
+    font-size 36px
 .professional
   display flex
   align-items center
@@ -79,6 +92,8 @@ export default {
     margin-bottom 40px
     &.right
       flex-direction column-reverse
+  &:last-of-type
+    margin-bottom 80px
 .border
   overflow hidden
   border-radius 500px
@@ -144,4 +159,32 @@ export default {
   margin-right -250px
   opacity 0.8
   filter brightness(0) invert(1)
+.yan
+  transform scale(1.7)
+.border-2
+  border solid 4px #69FBED
+.border-3
+  border solid 4px #53EEEE
+.border-4
+  border solid 4px #38DFF0
+.border-5
+  border solid 4px #0CC8F2
+.parallax
+  position relative
+.filter-p
+  width 100%
+  height 100%
+  background linear-gradient(to right , rgba(12, 200, 242, 0.9), rgba(29, 255, 212, 0.9))
+  position absolute
+  top 0
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  p
+    color #333
+    font-size 32px
+    font-weight 500
+    font-family Adam
+    margin-bottom 0
 </style>

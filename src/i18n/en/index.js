@@ -8,7 +8,7 @@ export default {
   aboutUs: {
     title: 'About Us',
     text1: 'Currently, any relevant industry member either already owns a machine learning model in production or are in the process of implementing one.',
-    text2: 'AI CAMP is a training program in machine learning, focused in deep learning and natural language processing, using cutting edge techniques on legal and governmental data. AI CAMP have a duration of five months and the objective of training high skilled AI engineers.'
+    text2: 'AI CAMP is a training program in machine learning, focused in Deep Learning and natural language processing (NLP), using cutting edge techniques on legal and governmental data. The Stanford AI CAMP training program have a duration of five months and the objective of training high skilled AI engineers.'
   },
   content: {
     title: 'Content',
@@ -24,7 +24,7 @@ export default {
     title: 'Schedule',
     curringEdge: {
       title: 'Cutting Edge',
-      text: 'AI Camp has the goal to teach and develop professionals that are up-to-date with the newest releases and breakthroughts in industry and academia. For this module, we select the major researches in fields such as Computer Vision, NLP, Reinforcement Learning and Robustness and Fairness in Machine Learning. We expect that the students reach the MVP Challenger with knowledge equal to researchers in big laboratories around the world.'
+      text: 'AI CAMP has the goal to teach and develop professionals that are up-to-date with the newest releases and breakthroughts in industry and academia. For this module, we select the major researches in fields such as Computer Vision, NLP, Reinforcement Learning and Robustness and Fairness in Machine Learning. We expect that the students reach the MVP Challenger with knowledge equal to researchers in big laboratories around the world.'
     },
     mvpChallenger: {
       title: 'MVP Challenge',
@@ -39,7 +39,7 @@ export default {
     title: 'Professionals Involved',
     ricardo: {
       name: 'RICARDO VIEIRA DE CARVALHO FERNANDES',
-      description: 'Post-PH.D. in Legal Informatics at the CODEX: The Stanford Center for Legal Informatics, Stanford University. Founder of the Brazilian Institute of Artificial Intelligence. Professor Doctor of Law School at the University of Brasília (UnB). Executive Director of Legal.AI – Legal ArtiFicial Intelligence Research Group of UnB. Legal Labs’ Founder. Senior Researcher of ArtiFicial Intelligence at Legal Labs. AI Camp’s Founder.'
+      description: 'Post-PH.D. in Legal Informatics at the CODEX: The Stanford Center for Legal Informatics, Stanford University. Founder of the Brazilian Institute of Artificial Intelligence. Professor Doctor of Law School at the University of Brasília (UnB). Executive Director of Legal.AI – Legal ArtiFicial Intelligence Research Group of UnB. Legal Labs’ Founder. Senior Researcher of ArtiFicial Intelligence at Legal Labs. AI CAMP’s Founder.'
     },
     fabricio: {
       name: 'Fabrício Braz',
@@ -52,6 +52,10 @@ export default {
     kleber: {
       name: 'Kleber',
       description: 'CIO of the Ministry of Transport, Ports and Civil Aviation; Ex-Director of ORACLE; Ex-Business Director of SERPRO; Ex-Business Administration Manager of ACCENTURE; Ex-Business Director of BearingPoint; Ex-Senior Specialist at the Finance Department of the IDB; Ex-General Coordinator of Information Technology for the Ministry of the Economy.'
+    },
+    yan: {
+      name: 'Yan Teixeira',
+      description: 'Manager of Legal Labs Brazil Startup. His work joins that of teachers, researchers and developers who are exploring the frontier between law and technology. Administrative officer of the II International Congress of Law, Government and Technology, the largest in Latin America in the debate and exhibition of intelligent technologies.'
     }
   },
   footer: {
@@ -62,5 +66,5 @@ export default {
     field3: 'Message',
     send: 'Send'
   },
-  copyright: 'AI Camp 2018 © All rights reserved'
+  copyright: 'AI CAMP 2018 © All rights reserved'
 }

@@ -1,9 +1,9 @@
 <template lang="pug">
   section.schedule-container#schedule
-    h2.title {{$t('schedule.title')}}
+    h2.title(:class="$t('schedule.title') === 'Cronograma' ? 'title-br' : ''") {{$t('schedule.title')}}
     div.black
       div.inner-content
-        img(src="../../assets/img/Schedule.svg")
+        img(:src="schedule")
     div.cards
       q-card.card
         h3.card-title {{$t('schedule.curringEdge.title')}}
@@ -21,7 +21,12 @@
 
 <script>
 export default {
-  name: 'Schedule'
+  name: 'Schedule',
+  computed: {
+    schedule () {
+      return require('../../assets/img/Schedule.svg')
+    }
+  }
 }
 </script>
 
@@ -34,6 +39,7 @@ export default {
   background white
   width 100%
   font-family OpenSans
+  overflow hidden
 .black
   width 100%
   background #231f20
@@ -48,19 +54,29 @@ export default {
   font-family Adam
   margin 0
   font-size 100px
-  line-height 40px
+  line-height 0
   color $tertiary
   text-align center
   margin 0
-  &.title-br
-    font-size 70px
-    line-height 40px
+  margin-bottom 22px
   @media (max-width: 650px)
     font-size 75px
-    line-height 35px
+    margin-bottom 15px
   @media (max-width: 510px)
     font-size 55px
-    line-height 23px
+    margin-bottom 10px
+  &.title-br
+    font-size 70px
+    margin-bottom 15px
+    @media (max-width: 650px)
+      font-size 55px
+      margin-bottom 10px
+    @media (max-width: 460px)
+      font-size 45px
+      margin-bottom 10px
+    @media (max-width: 360px)
+      font-size 35px
+      margin-bottom 6px
 .cards
   display flex
   margin 0 auto

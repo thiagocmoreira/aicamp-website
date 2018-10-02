@@ -50,7 +50,7 @@ export default {
       if (!this.isMobile && !this.wasActivated && scroll.position >= 230) {
         this.wasActivated = true
         this.animateBrain = true
-      } else if (this.isMobile && !this.wasActivated && scroll.position >= 950) {
+      } else if (this.isMobile && !this.wasActivated && scroll.position >= 700) {
         this.wasActivated = true
         this.animateBrain = true
       }
@@ -118,6 +118,9 @@ export default {
       margin-right 50px
       @media (max-width: 840px)
         margin 30px auto 20px auto
+      @media (max-width: 360px)
+        transform scale(0.8)
+        margin-left -3%
       .machine
         max-width 250px
         position absolute

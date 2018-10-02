@@ -24,11 +24,10 @@
         a
           img(src="../../assets/img/toda-branca.png")
         nav
-          a(href="#about-us").scrollactive-item {{$t('menu.aboutUs')}}
-          a(href="#content").scrollactive-item {{$t('menu.content')}}
-          a(href="#schedule").scrollactive-item {{$t('menu.schedule')}}
-          a(href="#professionals").scrollactive-item {{$t('menu.professionals')}}
-    p.we-are-there #wearethere
+          a(href="#", v-scroll-to="{ el: '#about-us', offset: -50}") {{$t('menu.aboutUs')}}
+          a(href="#", v-scroll-to="{ el: '#content', offset: -110}") {{$t('menu.content')}}
+          a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") {{$t('menu.schedule')}}
+          a(href="#", v-scroll-to="'#professionals'") {{$t('menu.professionals')}}
 </template>
 
 <script>
@@ -37,11 +36,13 @@ import VueParticles from 'vue-particles'
 Vue.use(VueParticles)
 
 import MenuIndex from '../menu/Menu'
+import Parallax from 'vue-parallaxy'
 
 export default {
   name: 'Introduction',
   components: {
-    MenuIndex
+    MenuIndex,
+    Parallax
   },
   data () {
     return {
@@ -147,19 +148,8 @@ export default {
   max-width 170px
   @media (max-width: 740px)
     display block
-.we-are-there
-  font-family Adam
-  position absolute
-  bottom 0
-  right 0
-  color white
-  font-size 32px
-  margin 30px
-  @media (max-width: 740px)
-    font-size 26px
-    margin 20px
-  @media (max-width: 414px)
-    font-size 20px
+  @media (max-width: 360px)
+    max-width 130px
 .menu
   position absolute
   top 0
