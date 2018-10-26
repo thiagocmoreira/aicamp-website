@@ -50,7 +50,7 @@ export default {
       description: 'PhD in Data Processing and Environmental Analysis by the Institute of Geosciences of the University of Brasília. Two postdoctoral degrees in Computational Techniques for Temporal Analysis of Remote Sensing Images by the Universities of Brasilia and Washington. A postdoctoral stage in pattern recognition in time series of environmental data. He is a professor / researcher at the Faculty of Engineering of the University of Brasília (UnB), is a member of the editorial board of The International Journal of Forensic Computer Science and is a reviewer of the International Journal of Remote Sensing.'
     },
     kleber: {
-      name: 'Kleber',
+      name: 'Kleber Rodrigues',
       description: 'CIO of the Ministry of Transport, Ports and Civil Aviation; Ex-Director of ORACLE; Ex-Business Director of SERPRO; Ex-Business Administration Manager of ACCENTURE; Ex-Business Director of BearingPoint; Ex-Senior Specialist at the Finance Department of the IDB; Ex-General Coordinator of Information Technology for the Ministry of the Economy.'
     },
     yan: {

@@ -4,7 +4,7 @@
       div.image
         img(src="../../assets/img/vertical-branco.png")
       div.coming-soon
-        q-icon(name="mdi-timer", color="teal-4", size="70px")
+        q-icon(name="mdi-timer", color="teal-13", size="70px")
         p {{$t('footer.informationsSoon')}}
       div.form
         h4.contact {{$t('footer.contact')}}

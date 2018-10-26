@@ -50,6 +50,13 @@ export default {
   margin 0 auto
   display flex
   flex-direction column
+  img
+    @media (max-width: 650px)
+      max-height 280px
+    @media (max-width: 510px)
+      max-height 200px
+    @media (max-width: 414px)
+      max-height 170px
 .title
   font-family Adam
   margin 0
