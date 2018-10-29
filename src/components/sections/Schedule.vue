@@ -4,6 +4,8 @@
     div.black
       div.inner-content
         img(:src="schedule")
+        div.image-zoom
+          zoom-on-hover(img-normal="https://legalabs.com.br/other-imgs/Schedule2.png")
     div.cards
       q-card.card
         h3.card-title {{$t('schedule.curringEdge.title')}}
@@ -20,8 +22,12 @@
 </template>
 
 <script>
+import ZoomOnHover from '../generic/ZoomOnHover'
 export default {
   name: 'Schedule',
+  components: {
+    ZoomOnHover
+  },
   computed: {
     schedule () {
       return require('../../assets/img/Schedule.svg')
@@ -56,7 +62,12 @@ export default {
     @media (max-width: 510px)
       max-height 200px
     @media (max-width: 414px)
+      display none
+  .image-zoom
+    display none
+    @media (max-width: 414px)
       max-height 170px
+      display block
 .title
   font-family Adam
   margin 0
